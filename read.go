@@ -40,7 +40,7 @@ func main() {
 	fileName := input.Text() + ".txt"
 
 	file, err := os.Open(fileName)
-    if err != nil {
+ 	if err != nil {
         log.Fatalf("failed to open your file")
   
     }
@@ -48,7 +48,7 @@ func main() {
 //read the file
 
 	scanner := bufio.NewScanner(file)
-    scanner.Split(bufio.ScanLines)
+	scanner.Split(bufio.ScanLines)
 
 	for scanner.Scan() {
         file_line = append(file_line, scanner.Text())
@@ -56,8 +56,8 @@ func main() {
    	file.Close()
 
 //split each string for names and create new instance of Person
-
-    for _, each_ln := range file_line {
+	
+	for _, each_ln := range file_line {
  		splitLine := strings.Split(each_ln, " ")
 		prsn.fName = splitLine[0]
 		prsn.lName = splitLine[1]
