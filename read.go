@@ -28,7 +28,7 @@ type Person struct {
 
 var persons []Person
 var prsn Person
-var file_line []string
+var fileLine []string
 
 
 func main() {
@@ -51,22 +51,22 @@ func main() {
 	scanner.Split(bufio.ScanLines)
 
 	for scanner.Scan() {
-        file_line = append(file_line, scanner.Text())
+        file_line = append(fileLine, scanner.Text())
     	}
    	file.Close()
 
 //split each string for names and create new instance of Person
 	
-	for _, each_ln := range file_line {
- 		splitLine := strings.Split(each_ln, " ")
+	for _, eachLn := range fileLine {
+ 		splitLine := strings.Split(eachLn, " ")
 		prsn.fName = splitLine[0]
 		prsn.lName = splitLine[1]
 		persons = append(persons, prsn)
 	}
 
 //Print person slice
-	for _, each_prsn := range persons {
-        fmt.Println(each_prsn)
+	for _, eachPrsn := range persons {
+        fmt.Println(eachPrsn)
 	}
 }
 
