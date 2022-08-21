@@ -40,10 +40,6 @@ type animal struct {
 	noise string
 }
 
-var typeRequest string
-var inputString string
-
-
 
 func (a *animal) Eat() string {
 	fmt.Printf(a.food)
@@ -86,6 +82,7 @@ func spiltInput(strInput string) []string {
 }
 
 func input() string {
+	var inputString string
 	repeat := true
 	for repeat == true {
 		fmt.Printf("\nEnter the animal name (cow/bird/snake) and what data you want (eats, moves, speaks): > \n")
