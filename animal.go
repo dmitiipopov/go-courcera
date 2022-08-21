@@ -64,14 +64,14 @@ func inputCheck(checkInput []string) bool {
 			inputCheckResult = true
 		} else if (checkInput[0] != strings.ToLower("bird") || checkInput[0] != strings.ToLower("cow") || checkInput[0] != strings.ToLower("snake")) && (checkInput[1] == strings.ToLower("eats") || checkInput[1] == strings.ToLower("moves") || checkInput[1] == strings.ToLower("speaks")) {
 			inputCheckResult = false
-			fmt.Println("Incorreact animal!")
+			fmt.Println("Incorrect animal!")
 		} else if (checkInput[0] == strings.ToLower("bird") || checkInput[0] == strings.ToLower("cow") || checkInput[0] == strings.ToLower("snake")) && (checkInput[1] != strings.ToLower("eats") || checkInput[1] != strings.ToLower("moves") || checkInput[1] != strings.ToLower("speaks")) {
 			inputCheckResult = false
-			fmt.Println("Incorreact data request!")
+			fmt.Println("Incorrect data request!")
 		}
 	} else {
 		inputCheckResult = false
-		fmt.Println("Incorreact request")
+		fmt.Println("Incorrect request")
 	}
 	return inputCheckResult
 }
